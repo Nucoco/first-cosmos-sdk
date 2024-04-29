@@ -1,0 +1,14 @@
+syntax = "proto3";
+package firstcosmossdk.firstcosmossdk;
+
+import "gogoproto/gogo.proto";
+import "firstcosmossdk/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "first-cosmos-sdk/x/firstcosmossdk/types";
+
+// GenesisState defines the firstcosmossdk module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
